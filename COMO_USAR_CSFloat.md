@@ -83,7 +83,7 @@ exportCSFloatCSV({
   filename: "armas.csv"
 });
 ```
-
+aaaaaaaaaa
 El archivo se descarga ya ordenado y separado por `;`, compatible con Excel en configuracion regional en espanol.
 
 Ejemplos de orden:
@@ -107,3 +107,25 @@ exportCSFloatCSV({
   filename: "armas_recientes.csv"
 });
 ```
+(async () => {
+  const r = await fetch("file:///C:/Users/xris/Documents/Codex/2026-04-30-como-puedo-recolectar-datos-de-una/csfloat_browser_export.js");
+  const code = await r.text();
+  eval(code);
+  console.log(typeof exportCSFloatCSV);
+})();
+aaaaaaaaaaa
+typeof exportCSFloatCSV
+aaaaaaaaaaaaa
+exportCSFloatCSV({
+  weapons: ["AK-47", "AWP", "M4A4", "Desert Eagle"],
+  pages: 50,
+  limit: 50,
+  maxTotalRows: 600,
+  minTotalRows: 300,
+  balanceWeapons: true,
+  requestDelayMs: 1800,
+  requestJitterMs: 1200,
+  maxRetries: 6,
+  backoffBaseMs: 2000,
+  filename: "armas_600.csv"
+});
